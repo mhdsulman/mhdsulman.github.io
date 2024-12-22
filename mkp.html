@@ -1,0 +1,47 @@
+<html>	
+<head> 
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<!--<script type="text/javascript" 
+src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>-->
+<script type="text/javascript" src="MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>	
+<body>	
+<h1> <center> Optimal Mass Transport Problem </center></h1> 
+<ul>
+<li> <h3> Introduction: </h3>
+</br>
+<ul>
+
+<li> The optimal mass transport problem also know as Monge-Kantrovich problem (MKP) first arises in the engineering community and it concerns finding an optimal way of moving a pile of sand from one configuration to another with minimum total work.</li>
+</br>
+</ul>
+<li> <h3> L<sup>2</sup> Monge-Kantorovich Problem:</h3>
+</br>
+<ul> 
+<li> The $L^2$ MKP states that given two positive density functions $\rho_0$   and $\rho_1$, find the mapping $\phi$ that transfers $\rho_0$  to  $\rho_1$ and minimizes the energy functional 
+</br>
+\[ C(\phi) = \int_{\mathbb{R}^d}\left|\phi(x) - x\right|^2\rho_0(x) d x.~~~~~~\qquad\]
+</li>
+<li> The map $\phi$ realizes the transfer of $\rho_0$ to $\rho_1$ if
+     
+      \[ \int_{\phi^{-1}(\Omega)} \rho_0(x)dx  =      \int_{\Omega}\rho_1(x)\, dx, \qquad \forall \; \Omega\subset \mathbb{R}^d~~~~~~\qquad~~~~~~\qquad  \]  
+</li>
+<li> This leads to 
+
+    \[ \rho_1(\phi) \textrm{det} \left(\frac{\partial \phi}{\partial x}\right)   = \rho_0.\]
+    </li>  
+    <li> Under some regularity conditions, there is a unique  $ \phi$ that solves the $L^2$ MKP and it is characterized as $\phi = \nabla \Psi.$</li>
+    </br>
+    <li> The solution of the  $L^2$ MKP reduces to solving the Monge Ap&egrave;re equation (MAE):
+   \[ \rho_1\left(\nabla \Psi\right) \textrm{det}\left( D^2 \Psi\right)  =  \rho_0,\]
+   where $D^2 \Psi$ is the Hessian matrix of $\Psi$. 
+</li>
+</br>
+<li> In <a href="http://www.sciencedirect.com/science/article/pii/S0168927410001819" target="dynamic"> my recent work </a>  (with Russell and Williams), we study the numerical solution of  MAE.
+</ul>
+  
+  </body>
+  </html>

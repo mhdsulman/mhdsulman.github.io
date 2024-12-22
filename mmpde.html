@@ -1,0 +1,100 @@
+<html>	
+<head> 
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<!--<script type="text/javascript"
+  src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>-->
+<script type="text/javascript" src="MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</head>		
+<body>	
+<h1> <center> Adaptive Grid Methods  </center></h1>  
+<ul><li><h3> Introduction:</h3></li>   
+<ul>
+   <li> Adaptive grid methods seek to provide numerical solutions of partial differential equation (PDE) with high accuracy. The adaptive grid is obtained as an image of a coordinate transformation defined from the computational domain $\Omega_c \subset \mathbb{R}^d$ to the physical domain $\Omega_p \subset \mathbb{R}^d$: 
+\[ x: \Omega_c \longrightarrow \Omega_p,\quad  x = \phi(\xi, t).\]
+. </li>
+</br>
+<img class="framed" align="center" src="figs/mmpde_map.png" width="850" height="400"alt="Adaptive mesh" />  
+</ul>
+</br>
+<li><h3> One-dimensional Equidistribution Principle:</h3></li>
+<ul> 
+<li> In one spatial dimension, the coordinate transformation for the adaptive grid generation is determined based on the well known equidistribtuion principle, a measure of the error indictor is the same over each subinterval. </li>
+ </br>
+   <img class="framed" align="center" src="figs/burgarc.png" width="650" height="400"alt="Equidistribution" />
+ </ul>
+
+  </br>
+
+ <li> <h3> Higher Dimensional Adaptive Grid Methods (MKP methods):</h3></li>
+ <ul>
+<li> In my <a href="http://www.sciencedirect.com/science/article/pii/S0021999111000507" target="dynamic">  recent research work</a> (with Russell and Williams), we investigate higher dimensional adaptive grid methods. For these methods the coordinate transformation for the adaptive mesh is obtained as a solution of the L<sup>2</sup> Monge - Kantorovich problem. </li>
+ </br>
+ <li> Let $\rho(x,t), t > 0$ be a monitor function (used as a measure of error indicator), then set
+      $\rho_0(\xi) = 1$, and $\rho_1(x) = \rho(x,t)$, 
+      $\xi \in \Omega_c, x \in \Omega.$</li>
+      </br>
+      <li>  The adaptive grid  $x =x(\xi), \xi \in \Omega_c$ is determined as the solution of the $L^2$ MKP:
+    \[ \inf_{x}\left(\int_{\Omega_c}\left|(x(\xi) -\xi\right|^2\rho_0(\xi)d \xi\right), \quad \textrm{among all}\;\; x(\xi) \;\;\textrm{satisfying}\quad \rho_1(x) \textrm{det}\left(\frac{\partial x}{\partial \xi}\right)   = \rho_0(\xi).\]
+    </li> 
+ </br>
+ <ul>
+ <li> <h3> Adaptive meshes for phase field medel:</h3>
+ <table>
+ <tr>
+ <td>
+ <img class="framed" align="center" src="figs/ball_surf_movie.gif" width="500" height="500"alt="Adaptive mesh" />     
+ </td>
+ <td>
+ <img class="framed" align="center" src="figs/ball_mesh_movie.gif" width="500" height="500"alt="Adaptive mesh" />     
+ </td>
+</tr>
+</table>
+
+<li> <h3> 2D Burgers' Equation:</h3>
+ <table>
+ <tr>
+ <td>
+ <img class="framed" align="center" src="figs/burgers_s1.png" width="550" height="450"alt="Adaptive mesh" />     
+ </td>
+ <td>
+ <img class="framed" align="center" src="figs/burgers_s4.png" width="550" height="450"alt="Adaptive mesh" />     
+ </td>
+ <td>
+ <img class="framed" align="center" src="figs/burgers_s5.png" width="550" height="450"alt="Adaptive mesh" />     
+ </td>
+ </tr>
+ <tr>
+ <td>
+ <img class="framed" align="center" src="figs/burgers_m1.png" width="550" height="450"alt="Adaptive mesh" />     
+ </td>
+ <td>
+ <img class="framed" align="center" src="figs/burgers_m4.png" width="550" height="450"alt="Adaptive mesh" />     
+ </td>
+ <td>
+ <img class="framed" align="center" src="figs/burgers_m5.png" width="550" height="450"alt="Adaptive mesh" />     
+ </td>
+ </tr>
+
+ </table>
+
+ <li> <h3> 3D Adaptive Grid: </h3></li>
+ <table>
+ <tr>
+ <td>
+ <img class="framed" align="center" src="figs/exp3d2m.png" width="550" height="450"alt="Adaptive mesh" />     
+ </td>
+ </tr>
+ </table>
+ </ul>
+ </ul>
+ 
+ <!--of the solution in each subinterval. Based on the equidistribution principle, Russell et al. (1994)  introduce the so-called moving mesh partial differential equation (MMPDE) method. In one spatial dimension, the MMPDE approach have proven to be an efficient and reliable approach for mesh adaptation. In higher dimensions, satisfying the equidistribution principle alone is not sufficient to uniquely determine the coordinate transformation. In my recent research work (Sulman et al. 2011), new higher dimensional adaptive grid methods have been developed based on solving the L<sub>2</sub> MongeÐKantorovich problem. The new adaptive methods have been successfully implemented for both 2D and 3D problems.-->
+</ul>
+  <!--<li> <h3> Adaptive Grid Methods based on Solving the L<sup>2</sup> Monge-Kantorovich Problem (MKP):  </h3> </li>-->
+
+  </body>
+  </html>
