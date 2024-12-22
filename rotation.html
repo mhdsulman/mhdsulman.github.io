@@ -1,0 +1,96 @@
+<html>
+<body>
+Time Dependent Quadrapole: The time inroduces rotation.
+<ul>
+<li> Part I: Rotation of (x,y) followed by rotation of the horizontal 
+  velocity (u(x,y),v(x,y)), i.e.
+  <ul>
+    <li> Step 1: Rotate (x,y), i.e. &nbsp;  x1 = cos(&omega; t) * x +
+sin(&omega; t) *y, &nbsp;&nbsp; y1 = -sin(&omega; t) * x + cos(&omega; t) *
+y </li>
+<li> Step 2:  Evaluate the velocity at (x1,y1,z), i.e.&nbps; u1 = u(x1,y1,z) &nbsp;&nbsp; v1 =
+v(x1,y1,z) &nbsp; &nbsp; w = w(x1,y1,z)</li>
+<li> Step 3: Rotate the resulting horizontal velocity, i.e.
+ u = cos(&omega; t) * u1 + sin(&omega; t) *v1, &nbsp;&nbsp; v = -sin(&omega;
+  t) *u1 + cos(&omega; t) *v1.
+  </li>
+</br>
+<table border "1">
+  <tr>
+    <td>
+   <img src="toy_quadrapole_dle_500.png" width="400" height="400"/>
+    </td>
+    <td>
+      <img src="toy_quadrapole_dle_401.png" width="400" height="400" />
+    </td>
+    <td>
+      <img src="QPT_Vel_Case401.jpg" width="400" height="400" /> 
+    </td>
+  </tr>
+</table>
+
+</br>
+
+<li> Part II: Rototation of (x,y) without rotating the velocity
+field (u(x,y),v(x,y)), i.e. </li>
+<ul>
+  <li> Step 1: Rotate (x,y), i.e. &nbsp;   x1 = cos(&omega; t) * x +
+sin(&omega; t) *y, &nbsp;&nbsp; y1 = -sin(&omega; t)* x + cos(&omega; t)
+y.</li>
+<li> Step 2: Evaluate the velocity at (x1,y1,z), i.e.,  u = u(x1,y1,z),
+&nbsp;&nbsp; v = v(x1,y1,z), &nbsp; &nbsp; w = w(x1,y1,z).</li>
+</ul>
+</br>
+<table border "1">
+  <tr>
+    <td>
+      <img src="toy_quadrapole_dle_601.png" width="400" height="400" />
+    </td>
+    <td>
+      <img src="QPT_Rot_Vel_Case601.jpg" width="400" height="400" />
+    </td>
+    <td>
+      <img src="qp_rot_vel_movie.gif" width="500" height="400" /> 
+    </td>
+  </tr>
+</table>
+</br>
+<li> Part III: Adding rotation to the velocity: xr = cos(&omega; t) x +
+sin(&omega; t) *y, &nbsp;&nbsp; yr = -sin(&omega; t) x + cos(&omega; t)
+y,&nbsp;&nbsp; u = u + xr, &nbsp;&nbsp; v = v + yr. </li>
+</br>
+<table border "1">
+  <tr>
+    <td>
+      <img src="toy_quadrapole_dle_602.png" width="400" height="400" />
+    </td>
+    <td>
+      <img src="QPT_Rot_Vel_602.jpg" width="400" height="400" />
+    </td>
+    <td>
+      <img src="qp_rot_vel_movie602.gif" width="500" height="400" /> 
+    </td>
+  </tr>
+</table>
+</br>
+<li> Part IV: Adding rotation to the velocity: xr = &omega;*(-sin(&omega; t)*x +
+cos(&omega; t)*y), &nbsp;&nbsp; yr = &omega;(-cos(&omega; t)*x - sin(&omega; t))
+y,&nbsp;&nbsp; u = u + xr, &nbsp;&nbsp; v = v + yr. </li>
+</br>
+<table border "1">
+  <tr>
+    <td>
+      <img src="toy_quadrapole_dle_402.png" width="400" height="400" />
+    </td>
+    <td>
+      <img src="QPT_Rot_Vel_402.jpg" width="400" height="400" />
+    </td>
+    <td>
+      <img src="qp_rot_vel_movie402.gif" width="500" height="400" /> 
+    </td>
+  </tr>
+</table>
+
+</ul>
+</body>
+</html>
